@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html ng-app="ngBoilerplate" ng-controller="AppCtrl">
+  <head>
+    <title ng-bind="pageTitle"></title>
+    <meta charset="utf-8">
+
+    <!-- social media tags -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@joshdmiller">
+    <meta name="twitter:title" content="ngBoilerplate">
+    <meta name="twitter:description" content="Non-Trivial AngularJS Made Easy: Everything you need to kickstart AngularJS projects: a best-practice directory structure, an intelligent build system, and the best web design libraries around.">
+    <meta name="twitter:creator" content="@joshdmiller">
+    <meta name="twitter:image:src" content="https://a248.e.akamai.net/assets.github.com/images/modules/logos_page/Octocat.png?1366128846">
+    <meta property="og:title" content="ngBoilerplate" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://bit.ly/ngBoilerplate" />
+    <meta property="og:image" content="https://a248.e.akamai.net/assets.github.com/images/modules/logos_page/Octocat.png?1366128846" />
+    <meta property="og:description" content="Non-Trivial AngularJS Made Easy: Everything you need to kickstart AngularJS projects: a best-practice directory structure, an intelligent build system, and the best web design libraries around.">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- font awesome from BootstrapCDN -->
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link href="assets/main.css" rel="stylesheet" >
+
+    <!-- compiled CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/ngbp-0.3.2.css" />
+    <!-- compiled JavaScript -->
+    <script type="text/javascript" src="vendor/angular/angular.js"></script>
+    <script type="text/javascript" src="vendor/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="vendor/angular-bootstrap/bootstrap-select.css">
+    <script type="text/javascript" src="vendor/placeholders/angular-placeholders-0.0.1-SNAPSHOT.min.js"></script>
+    <script type="text/javascript" src="vendor/angular-ui-router/release/angular-ui-router.js"></script>
+    <script type="text/javascript" src="src/app/about/about.js"></script>
+    <script type="text/javascript" src="src/app/app.js"></script>
+    <script type="text/javascript" src="src/app/filters/filters.js"></script>
+    <script type="text/javascript" src="src/app/home/home.js"></script>
+    <script type="text/javascript" src="src/common/plusOne/plusOne.js"></script>
+    <script type="text/javascript" src="templates-common.js"></script>
+    <script type="text/javascript" src="templates-app.js"></script>
+
+  </head>
+
+  <body>
+    <header id="bch">
+  <div class="container-fluid header-top">
+    <div class="row">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-11 col-sm-offset-1 col-md-10 col-md-offset-2 col-lg-8 col-lg-offset-4 ">
+              <div class="row barra-top">
+                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                  <a href="#" class="top-link">
+                    <img src="assets/img/ico-question.png" alt="icono-ayuda">Ayuda <img src="assets/img/arrow-down-upper-header.jpg" alt="icono--mas-contenido">
+                  </a>
+                </div>
+                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 ">
+                    <a href="#" class="top-link"><img src="assets/img/ico-alert.png" alt="">Emergencias</a>
+                </div>
+                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 ">
+                    <a href="tel:6006373737" class="top-link"><img src="assets/img/ico-phone.png" alt="">(600) 637 37 37</a>
+                </div>
+                <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 ">
+                  <p> Tu ejecutivo <strong>Osvaldo Sanchez Cabezas</strong>
+                    <a href="mailto: osanchez@banchochile.cl">osanchez@banchochile.cl</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div> <!-- END HEADER TOP -->
+
+  <div class="container-fluid header-middle">
+    <div class="row">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4"> <!-- LOGOTIPO -->
+            <a href="#" class="logo-header">
+                <h1>Banco de Chile</h1>
+            </a>
+
+            <div class="label-banca">Banco en línea</div>
+          </div>  <!-- END LOGOTIPO -->
+          <div class="col-xs-5 col-xs-offset-3 col-sm-5 col-sm-offset-3 col-md-5 col-md-offset-3 col-lg-5 col-lg-offset-3">
+            <div class="caja-usuario"> <!-- CAJA USUARIO -->
+              <ul class="list-inline">
+                <li class="container-user">
+                    <img src="assets/img/user-btn-mobile.png" alt="">
+                    <span class="datos-usuario">
+                      <h4>Mauricio Lopez Dummy</h4>
+                      <p><small>Ultimo acceso 22/10/1988 - 22:40</small></p>
+                      </span>
+                     </li>
+                  <li>
+                    <a href="#" class="notificaciones">
+                      <span class="cantidad-noticifaciones">20</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="salir-cuenta">
+                       Salir <img src="assets/img/ico-btn-salir-header.png" alt="">
+                    </a>
+                  </li>
+                </ul>
+              </div> <!-- END CAJA USUARIO -->
+            </div>
+
+          </div>
+        </div>
+      </div>
+  </div> <!-- END HEADER MIDDLE -->
+
+  <div class="container-fluid header-botonera">
+    <div class="row">
+      <div class="container">
+        <div class="col-lg-12 col-md-12 col-xs-12">
+           <div id="home">
+           <a href="#"><img src="assets/img/ico-home.png" alt=""></a>
+           </div>
+            <!-- Single button start -->
+              <div class="btn-group" dropdown is-open="status.isopen">
+                <button type="button" class="btn btn-nav dropdown-toggle" ng-disabled="disabled">
+                  Productos<span class="ico-nav"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="#">Cuenta corriente 1</a></li>
+                  <li><a href="#">Linea de Credito 1</a></li>
+                  <li><a href="#">Tarjeta de Credito</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">Hipotecario</a></li>
+                </ul>
+              </div>
+           <!-- Single button end -->
+        </div>
+      </div>
+    </div>
+  </div>
+</header> <!-- END HEADER -->
+
+
+
+
+<div class="container" >
+    <div class="row">
+        <section class="breadcrumb bread-no-bg"> <!-- BREADCUMBS --> 
+            <a href="javascript:void(0);">Inicio</a> &gt; <a href="javascript:void(0);">Tarjetas de Cr&eacute;dito</a> &gt; <a  class="active" href="javascript:void(0);">Saldo</a>
+        </section>
+
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 primer-titulo"> <!-- TITULO PAGINA -->
+            <h2>Tarjetas de Cr&eacute;dito <i class="glyphicon glyphicon-question-sign"></i></h2>  
+        </div>
+    
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"> <!-- SELECCION TARJETA -->
+            <section class="seleccion-tarjeta"> 
+                <label>Elije tu tarjeta</label>
+
+                 <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                        TIT Mastercard Nacional 4152822090000220<span class="caret"></span>
+                    </button>
+                    
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                        <li>
+                            <a role="menuitem" tabindex="-1" href="#">TIT Mastercard Nacional 4152822090000220</a>
+                        </li>
+                             
+                    </ul>     
+                </div> 
+            </section> 
+           <section class="seleccion-tarjeta  "> 
+                <label>Elije tu tarjeta 2</label>
+                 <select class="selectpicker" style="display: none;">
+                  <option>TIT Mastercard Nacional 4152822090000220</option>
+                  <option>TIT Mastercard Nacional 4152822090000221</option>
+                  <option>TIT Mastercard Nacional 4152822090000222</option>
+                </select>
+               <div class="btn-group bootstrap-select">
+               <button type="button" class="btn dropdown-toggle selectpicker btn-default" data-toggle="dropdown" title="Mustard">
+               <span class="filter-option pull-left">TIT Mastercard Nacional 4152822090000220</span>&nbsp;<span class="caret"></span>
+               </button>
+               <div class="dropdown-menu open" style="max-height: 238px; overflow: hidden; min-height: 0px;">
+                <ul class="dropdown-menu inner selectpicker" role="menu" style="max-height: 226px; overflow-y: auto; min-height: 0px;">
+                  <li rel="0" class="selected"><a tabindex="0" class="" style=""><span class="text">TIT Mastercard Nacional 4152822090000220</span><i class="glyphicon glyphicon-ok icon-ok check-mark"></i></a></li>
+                  <li rel="1"><a tabindex="0" class="" style=""><span class="text">TIT Mastercard Nacional 4152822090000221</span><i class="glyphicon glyphicon-ok icon-ok check-mark"></i></a></li>
+                  <li rel="2"><a tabindex="0" class="" style=""><span class="text">TIT Mastercard Nacional 4152822090000222</span><i class="glyphicon glyphicon-ok icon-ok check-mark"></i></a></li></ul>
+                  </div>
+                </div>
+            </section>                 
+        </div> <!-- END SELECCION TARJETA -->
+    
+    
+
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 contenedor-tabs-saldos ">    
+        <div ng-controller="TabsDemoCtrl"> <!-- TABS NAV -->
+            <tabset justified="true" >
+
+                <tab heading="Saldos" >  <!-- TAB SALDOS NACIONAL - INTERNACIONAL -->
+                    <section class="col-lg-5 " ng-controller="GetData"> <!-- SALDOS IZQUIERDA -->
+                        <div ng-controller="CollapseDemoCtrl" class="cupo-nacional"> <!-- CUPO NACIONAL  -->
+                            <h3><span class="circulo-estado"></span>Cupo Nacional</h3>
+                            <ul class="listado-de-saldos">
+                                <li>
+                                    Total<span class="text-success">{{pesos(tarjeta.cupoCompraNacional)}}</span>
+                                </li> 
+                                <li collapse="isCollapsed">
+                                    Utilizado<span>{{pesos(tarjeta.deudaComprasNacional)}}</span> 
+                                </li>
+
+                                <li collapse="isCollapsed">
+                                    Disponible  <span>{{pesos(tarjeta.disponibleComprasNacional)}}</span>
+                                </li>
+                                <li>
+                                    Total Avance <span>{{pesos(tarjeta.cupoAvancesNacional)}}</span>
+                                </li>
+
+                                <li collapse="isCollapsed">
+                                    Utilizado Avance<span>{{pesos(tarjeta.deudaAvancesNacional)}}</span>
+                                </li>
+
+                                <li collapse="isCollapsed">
+                                    Disponible Avance<span>{{pesos(tarjeta.disponibleAvancesNacional)}}</span>
+                                </li>
+                            </ul>
+
+                            <a class="tarjetas-credito-ver-mas">
+                                <hr> 
+                                <span id="expandir" ng-click="select($event)" class="text-ver-mas">
+                                    {{labelBotton}} <span class={{arrow}}></span>
+                                </span>
+                            </a>
+                        </div><!-- END CUPO NACIONAL  -->
+
+                        <div ng-controller="CollapseDemoCtrl" class="cupo-internacional"> <!-- CUPO INTERNACIONAL -->
+                            <h3><span class="circulo-estado"></span>Cupo Internacional</h3>
+
+                            <ul class="listado-de-saldos">
+                                <li>
+                                    Total    <span class="text-success">{{dolar(tarjeta.cupoComprasInternacional)}}</span>
+                                </li> 
+                                <li collapse="isCollapsed">
+                                    Utilizado   <span>{{dolar(tarjeta.deudaComprasInternacional)}}</span> 
+                                </li>
+                                <li collapse="isCollapsed">
+                                    Disponible  <span>{{dolar(tarjeta.disponibleComprasInternacional)}}</span>
+                                </li>
+                                <li>
+                                    Total Avance <span>{{dolar(tarjeta.cupoAvancesInternacional)}}</span>
+                                </li>
+                                <li collapse="isCollapsed">
+                                    Utilizado Avance    <span>{{dolar(tarjeta.deudaComprasInternacional)}}</span>
+                                </li>
+                                <li collapse="isCollapsed">
+                                    Disponible Avance   <span>{{dolar(tarjeta.disponibleComprasInternacional)}}</span>
+                                </li>
+                            </ul> 
+                            <a class="tarjetas-credito-ver-mas">
+                                <hr> 
+                                <span ng-click="select($event)"  class="text-ver-mas" >
+                                    {{labelBotton}} <span class={{arrow}}></span>
+                                </span>
+                            </a>
+                        </div> <!-- END CUPO INTERNACIONAL -->
+                    </section>  
+                            
+                    <section class="col-lg-7 carousel-saldos-tarjetas"> <!-- CAROUSEL DERECHA -->
+                        <div ng-controller="CarouselDemoCtrl">
+                            <div style="height: 305px">
+                                <carousel interval="myInterval">
+                                    <slide ng-repeat="slide in slides" active="slide.active">
+                                        <img src="assets/graficos.png" style="margin:auto;">
+                                    </slide>
+                                </carousel>
+                            </div>
+                        </div>
+                    </section> <!-- END CAROUSEL DERECHA -->
+                </tab> <!-- END TAB SALDOS NACIONAL - INTERNACIONAL -->
+
+                <!-- TABS SIN CONTENIDO -->
+                <tab heading="XXXX">Short Labeled Justified content</tab>
+                <tab heading="XXXX">Long Labeled Justified content</tab>
+                <tab heading="XXXX">Long Labeled Justified content</tab>
+            </tabset>
+            </div>
+        </div>
+    </div>
+</div> <!-- /container -->   
+    <script type="text/javascript">
+
+
+  function DropdownCtrl($scope) {
+
+  $scope.selectedItem = "Items";
+
+  $scope.OnItemClick = function(event) {
+    $scope.selectedItem = event;
+  }
+}
+
+    </script>
+  </body>
+</html>

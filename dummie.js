@@ -1,0 +1,32 @@
+[
+    {
+    "numeroTarjeta":"0004152830504002682",	
+    "cupoCompraNacional":"500000",
+    "cupoComprasInternacional":"1000.0",
+    "cupoAvancesNacional":"475000",
+    "cupoAvancesInternacional":"1000.0",
+    "deudaComprasNacional":"0",
+    "deudaComprasInternacional":"0",
+    "deudaAvancesNacional":"0",
+    "deudaAvancesInternacional":"0",
+    "disponibleComprasNacional":"500000",
+    "disponibleComprasInternacional":"1000.00",
+    "disponibleAvancesNacional":"475000",
+     "disponiblesAvancesInternacional":"1000.0"
+    },
+    {
+    "numeroTarjeta":"0004152830504002683",  
+    "cupoCompraNacional":"500000",
+    "cupoComprasInternacional":"1000.0",
+    "cupoAvanceNacional":"475000",
+    "cupoAvanceInternacional":"1000.0",
+    "deudaComprasNacional":"0",
+    "deudaComprasInternacional":"0",
+    "deudaAvancesNacional":"0",
+    "deudaAvancesInternacional":"0",
+    "disponibleComprasNacional":"500000",
+    "disponibleComprasInternacional":"1000.00",
+    "disponibleAvancesNacional":"475000",
+     "disponiblesAvancesInternacional":"1000.0"
+    }
+]
