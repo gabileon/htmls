@@ -706,3 +706,10 @@ header {}
   border-right: none!important;
   padding-left: 20px;
 }
+
+.movimientos-no-facturados .mensaje-no-movimientos-facturados {
+  text-align: center!important;
+  font-size: 18px;
+  padding: 20px!important;
+
+}
