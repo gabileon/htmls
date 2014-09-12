@@ -726,7 +726,7 @@ header {}
   padding: 20px;
 }
 
-.alert-warning .glyphicon {
+.alert-warning img {
   font-size:-webkit-xxx-large;
   float: left;
   margin: -2px 0 9px 20px;
