@@ -683,6 +683,7 @@ header {}
   background-color: #F8F8F8;
 }
 .btn-toolbar {
+ 
   margin-left: 6px!important;
 }
 
@@ -707,9 +708,35 @@ header {}
   padding-left: 20px;
 }
 
+/*TABLA MOVIMIENTOS NO FACTURADOS SIN MOVIMIENTOS*/
 .movimientos-no-facturados .mensaje-no-movimientos-facturados {
   text-align: center!important;
   font-size: 18px;
   padding: 20px!important;
 
 }
+
+/*MENSAJE DE ALERTA NO CONEXION CON NEXUS*/
+.alert-warning {
+  color:#4C4D48!important;
+  border-color: #EAEBDD!important;
+  margin-top: 40px;
+  background-color: #FFFFB7!important;
+  display: inline-block;
+  padding: 20px;
+}
+
+.alert-warning .glyphicon {
+  font-size:-webkit-xxx-large;
+  float: left;
+  margin: -2px 0 9px 20px;
+}
+
+.alert-warning h4,
+.alert-warning p{
+  margin-left:100px!important;
+  margin-bottom: -2px;
+  font-size: 18px;
+}
+
+
