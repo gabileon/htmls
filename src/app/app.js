@@ -20,6 +20,14 @@ angular.module( 'ngBoilerplate', [
     }
 
   });
+  $scope.formatoTarjeta = function(tarjeta){
+    if(tarjeta == null ) return "-";
+    enmascaramientoTarjeta = 'XXXX '+tarjeta.numProducto.substring(tarjeta.numProducto.length-4, tarjeta.numProducto.length);
+    if(tarjeta.titularidad=="T") titularidad = "TIT";
+    else titularidad = "ADI";
+    return titularidad+" "+tarjeta.marca+" "+enmascaramientoTarjeta;
+  };
+
   $scope.pesos = function(strCurrency){
       //pesos currency has decimal then round it to nearest value.
       numCurrency = Number(strCurrency);      
@@ -62,12 +70,32 @@ angular.module( 'ngBoilerplate', [
 
 
     $scope.dolar = function(usdAmount){
-      if(usdAmount == "0"){return 'US$0,00'}
-
-
       if(isNaN(Number(usdAmount))) return 'US$0,00';
-      if (Number(usdAmount)% 1 == 0){
+      if(usdAmount == "0"){return 'US$0,00'};
+        if(Math.round(usdAmount) != usdAmount){
+        var sinDecimal = usdAmount.split(".");
+     
         var amount; 
+        amount = Number(sinDecimal[0]+sinDecimal[1])/Math.pow(10,Number(sinDecimal[1].length));
+      
+        if (usdAmount.toString().indexOf(".") != -1) {
+            amount = amount.toFixed(2);
+        } else {
+            amount = usdAmount;
+        }
+
+        var amountStr = amount.toString().trim().replace(".", ",").split(",");
+        var modifiedAmt;
+        if (amountStr.length > 1)
+            modifiedAmt = $scope.pesos(amountStr[0]) + "," + amountStr[1];
+        else
+            modifiedAmt = $scope.pesos(amountStr.toString());
+        return 'US'+modifiedAmt;
+        
+      }
+      else{
+        var amount;
+        amount = Number(usdAmount);   
         if (usdAmount.toString().indexOf(".") != -1) {
             amount = amount.toFixed(2);
         } else {
@@ -79,30 +107,34 @@ angular.module( 'ngBoilerplate', [
             modifiedAmt = $scope.pesos(amountStr[0]) + "," + amountStr[1];
         else
             modifiedAmt = $scope.pesos(amountStr.toString());
-        return 'US'+modifiedAmt+',00';
+        if (modifiedAmt.indexOf(",00") > -1) return modifiedAmt;
+        else{return modifiedAmt+',00'}        
       }
+    };
 
-      var decimal = usdAmount.split(".");
-      if(Number(decimal == 0 )) return 'US$0,00';
-      
-      var amount; 
-      amount = Number(decimal[0]+decimal[1])/Math.pow(10,Number(decimal[1].length)); 
-      if (usdAmount.toString().indexOf(".") != -1) {
-          amount = amount.toFixed(2);
-      } else {
-          amount = usdAmount;
-      }
-      var amountStr = amount.toString().trim().replace(".", ",").split(",");
-      var modifiedAmt;
-      if (amountStr.length > 1)
-          modifiedAmt = $scope.pesos(amountStr[0]) + "," + amountStr[1];
-      else
-          modifiedAmt = $scope.pesos(amountStr.toString());
-      return 'US'+modifiedAmt;
-    }
-  
-  
+    $scope.formatoHora = function(hora){
+     	formatoHora = hora.substring(hora.length-3, "");
+      	return formatoHora;
+  	};
+    $scope.formatoFechaAño = function(fecha){
+        agno = fecha.substring(fecha.length-10, fecha.length-6);
+        return agno;
+      };
 
+  	$scope.formatoFechaDia = function(fecha){
+     	 	dia = fecha.substring(fecha.length-2, fecha.length);
+      	fecha = dia + " de ";
+      	return fecha;
+      };
+
+    $scope.formatoFechaMes = function(fecha){
+      var meses = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', ' Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
+      mes = fecha.substring(fecha.length-5, fecha.length-3);
+      mes = parseInt(mes);
+      mesf = meses[mes - 1];      
+      return mesf;
+  	};
+//23-12-2012
 });
 
 //// Tabs ////
@@ -146,16 +178,86 @@ function CarouselDemoCtrl($scope) {
   }
 }
 
-function GetData($scope,$http){
-//  $http.get('http://localhost:8080/webapps/consultasaldos/home?numeroTarjeta=4152822090000220',$scope.tarjeta).
- // success(function(data, status, headers, config) {
- // console.debug("success",$scope.tarjeta);
-  //$scope.tarjeta = data;
- // }).
- // error(function(data, status, headers, config) {
-//  });  
+function GetDataTarjetas($scope,$http){
+  $http.get('dummieInfoTarjetas.js').
+  success(function(data, status, headers, config) {
+  
+  $scope.tarjetas = data;
+  
+
+  //FILTRAR TARJETAS ACTIVAS
+  for(var i = 0 ; i < $scope.tarjetas.length; i++){
+    if($scope.tarjetas[i].estado != "Vigente o Activo") {
+      $scope.tarjetas.splice(i--, 1);
+    }
+  }
+  $scope.tarjetaSeleccionada = $scope.tarjetas[0];
+  //LLAMAR SERVICIO DE SALDOS PARA TARJETA 0
+    $http.get('dummie.js').
+    success(function(data, status, headers, config) {
+
+    $scope.tarjeta = data;
+    }).
+    error(function(data, status, headers, config) {
+    });
+///////////////////////////////////////////////////    
+  }).
+  error(function(data, status, headers, config) {
+  });
+}
+
+function GetDataTarjetaSeleccionada($scope,$http){
+  $http.get('dummie.js').
+  success(function(data, status, headers, config) {
+  console.debug("success");
+  $scope.tarjeta = data;
+  }).
+  error(function(data, status, headers, config) {
+  });  
+}
+
+function GetDataTransacciones($scope,$http){
+ // $http.get('dummieTransacciones.js').
 
 
+  $http.get('transacciones.json').
+  success(function(data, status, headers, config) {
+  
+  //$scope.transaccion = data;
+  var transaccion = data;
+  $scope.movimientosNacionales = [];
+  $scope.movimientosInternacionales = [];
+  var fecha ;
+  $scope.mesf;
+  var meses = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', ' Agosto', 'Septiembre', 'Octubre', 'Noviembre', ' Diciembre'];
+      
+      	
+
+
+  for(var i = 0 ; i < transaccion.transacciones.length; i++){
+  //  for(var i = 0 ; i < transaccion.length; i++){
+    if(transaccion.transacciones[i].origenTransaccion == "NAC") {
+//    if(transaccion[i].origenTransaccion == "NAC") {
+    	//fecha = transaccion.transacciones[i].fechaAutorizacion;
+  //   	fecha = transaccion[i].fechaAutorizacion;
+    	
+  //   	mes = fecha.substring(fecha.length-5, fecha.length-3);
+		// console.log(mes);
+  //     	mesf = meses[mes - 1];  
+  //       $scope.movimientosNacionales[mesf].push(transaccion[i]);
+      	$scope.movimientosNacionales.push(transaccion.transacciones[i]);
+      	//console.log($scope.movimientosNacionales[mesf].push(transaccion[i]));
+    }
+    else{
+      $scope.movimientosInternacionales.push(transaccion.transacciones[i]);
+    }     
+  }
+  }). 
+  error(function(data, status, headers, config) {
+  });  
+}  
+/* 
+/// LLAMADA  A SERVICIO REST
       var res = $http.get('/json/1.json');
   //var res = $http.get('/service/consultasaldos/home?numeroTarjeta=4152822090000204&submit=Ingresar');        
         res.success(function(data, status, headers, config) {
@@ -163,21 +265,19 @@ function GetData($scope,$http){
             $scope.tarjeta = data;
   //          alert("1");
         });
+*/
+ 
 
-}   
+
 
 function DropdownCtrl($scope) {
-//alert("entroaS1");
-  
   var defaul=0;
   $scope.OnItemClick = function(event) {
-  //  alert("entroaS");
+    console.log(event);
     $scope.selectedItem = event;
-     defaul = 1;
+    console.log(event);
+    $scope.tarjetaSeleccionada = event;
+    
   } 
-  if(defaul!=1){
-    $scope.selectedItem = "TIT Mastercard Nacional XXXX2682";
-
-  } 
-
 }
+
