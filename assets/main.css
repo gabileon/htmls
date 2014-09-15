@@ -477,6 +477,10 @@ header {}
   text-align: left;
 }
 
+.dropdown .dropdown-menu{
+  width: 270px;
+}
+
 .btn-default{
   width:270px;
 }
