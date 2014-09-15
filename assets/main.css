@@ -685,14 +685,16 @@ header {}
   margin: 0 5px 0 5px;
 }
 
+.btn-toolbar .numero-pagina .numeracion{
+  width: 30px!important;
+}
 .flechas .btn{
   border-radius:inherit;
   margin-left: 23px !important;
   background-color: #F8F8F8;
 }
 .btn-toolbar {
- 
-  margin-left: 6px!important;
+   margin-left: 6px!important;
 }
 
 .tabla-movimientos-no-facturados .nav-tabs{
