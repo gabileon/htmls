@@ -729,10 +729,10 @@ header {}
 
 /*MENSAJE DE ALERTA NO CONEXION CON NEXUS*/
 .alert-warning {
-  color:#4C4D48!important;
-  border-color: #EAEBDD!important;
+  color:#000000!important;
+  border-color: #D5D5D5!important;
   margin-top: 40px;
-  background-color: #FFFFB7!important;
+  background-color:#FAD3BA!important;
   display: inline-block;
   padding: 20px;
 }
@@ -741,6 +741,8 @@ header {}
   font-size:-webkit-xxx-large;
   float: left;
   margin: -2px 0 9px 20px;
+  height: 40px;
+  width: 40px;
 }
 
 .alert-warning h4,
