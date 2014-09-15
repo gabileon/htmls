@@ -473,9 +473,17 @@ header {}
   vertical-align: middle;
 }
 
+.dropdown .seleccion-tarjetas{
+  text-align: left;
+}
 
+.btn-default{
+  width:270px;
+}
 
-
+.btn{
+  text-align: left!important;
+}
 /*CONTENEDOR DE TABS SALDOS*/
 
 .contenedor-tabs-saldos .nav > li {
@@ -707,6 +715,7 @@ header {}
   border-right: none!important;
   padding-left: 20px;
 }
+
 
 /*TABLA MOVIMIENTOS NO FACTURADOS SIN MOVIMIENTOS*/
 .movimientos-no-facturados .mensaje-no-movimientos-facturados {
