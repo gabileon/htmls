@@ -740,12 +740,13 @@ header {}
 
 /*MENSAJE DE ALERTA NO CONEXION CON NEXUS*/
 .alert-warning {
-  color:#000000!important;
+  color:#4C4C4C!important;
   border-color: #D5D5D5!important;
   margin-top: 40px;
   background-color:#FAD3BA!important;
   display: inline-block;
   padding: 20px;
+  width: 100%;
 }
 
 .alert-warning img {
