@@ -798,8 +798,11 @@ header {}
 .caja-pasos:nth-child(1)::before{
   content: "1";
 }
-.caja-pasos:last-child::before{
+.caja-pasos:nth-child(2)::before{
   content: "2";
+}
+.caja-pasos:nth-child(3)::before{
+  content: "3";
 }
 
 
@@ -892,7 +895,6 @@ header {}
 }
 
 .confirmacion-datos .titulo-confirmacion-datos{
-  margin-top: 56px;
   color: #003772;
 }
 .confirmacion-datos ul{
@@ -916,7 +918,6 @@ header {}
 }
 
 .dispositivo-de-seguridad .titulo-dispositivo-de-seguridad{
-  margin-top: 56px;
   color: #003772;
 
 }
