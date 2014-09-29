@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html ng-app="ngBoilerplate" ng-controller="AppCtrl">
+  <head>
+    <title ng-bind="pageTitle"></title>
+    <meta charset="utf-8">
+
+    <!-- social media tags -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@joshdmiller">
+    <meta name="twitter:title" content="ngBoilerplate">
+    <meta name="twitter:description" content="Non-Trivial AngularJS Made Easy: Everything you need to kickstart AngularJS projects: a best-practice directory structure, an intelligent build system, and the best web design libraries around.">
+    <meta name="twitter:creator" content="@joshdmiller">
+    <meta name="twitter:image:src" content="https://a248.e.akamai.net/assets.github.com/images/modules/logos_page/Octocat.png?1366128846">
+    <meta property="og:title" content="ngBoilerplate" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://bit.ly/ngBoilerplate" />
+    <meta property="og:image" content="https://a248.e.akamai.net/assets.github.com/images/modules/logos_page/Octocat.png?1366128846" />
+    <meta property="og:description" content="Non-Trivial AngularJS Made Easy: Everything you need to kickstart AngularJS projects: a best-practice directory structure, an intelligent build system, and the best web design libraries around.">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- font awesome from BootstrapCDN -->
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link href="assets/main.css" rel="stylesheet" >
+
+    <!-- compiled CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/ngbp-0.3.2.css" />
+    <!-- compiled JavaScript -->
+    <script type="text/javascript" src="vendor/angular/angular.js"></script>
+    <script type="text/javascript" src="vendor/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="vendor/angular-bootstrap/bootstrap-select.css">
+    <script type="text/javascript" src="vendor/placeholders/angular-placeholders-0.0.1-SNAPSHOT.min.js"></script>
+    <script type="text/javascript" src="vendor/angular-ui-router/release/angular-ui-router.js"></script>
+    <script type="text/javascript" src="src/app/about/about.js"></script>
+    <script type="text/javascript" src="src/app/app.js"></script>
+    <script type="text/javascript" src="src/app/filters/filters.js"></script>
+    <script type="text/javascript" src="src/app/home/home.js"></script>
+    <script type="text/javascript" src="src/common/plusOne/plusOne.js"></script>
+    <script type="text/javascript" src="templates-common.js"></script>
+    <script type="text/javascript" src="templates-app.js"></script>
+
+  </head>
+
+  <body>
+
+  <div class="container-fluid">
+
+    <div class="row">
+        <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 col-lg-offset-2">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        		<h4>Datos de Pago</h4>
+        	</div>
+        	<div class="row">
+                    <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 col-lg-offset-1">    		
+                            <div class="row">
+                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                            		  <p>Deuda Total</p>
+                            		</div>
+                            		<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                            			<span>$ 3.004.350</span>
+                            		</div>
+                            </div>
+                            <div class="row">
+                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                      <p>Monto Facturado</p>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                        <span>$ 325.895</span>
+                                    </div>
+                            </div>
+                    </div>
+            		<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                    <div class="Facturacion">
+                                        <div class="row">
+                                                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                                                    <p>Facturado al:</p>
+                                                </div>  
+                                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                                    <span>11 de septiembre</span>
+                                                </div>
+                                        </div>
+                                        <div class="row">
+                                                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                                                    <p>Pagar Hasta:</p>
+                                                </div>  
+                                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                                    <span>28 de septiembre</span>
+                                                </div>
+                                        </div>                            
+                                    </div> 
+                    </div>                     
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <p>Selecciona donde quieres realizar el pago de tu Tarjeta</p>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    <div class="dropdown seleccion-cueta-cargo">
+                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                            Seleccione Cuenta de cargo<span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Cuenta corriente *** ** **8309</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    &nbsp;
+                </div>        
+            </div> 
+
+            <div class="row">
+                    <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 col-lg-offset-1">           
+                            <div class="row">
+                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                      <p>Saldo en cueta:</p>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                        <span>$ 1.259.895</span>
+                                    </div>
+                            </div>
+                            <div class="row">
+                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                      <p>Línea de crédito disponible</p>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                        <span>$ 1.159.895</span>
+                                    </div>
+                            </div>                            
+                    </div>                                 
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <h4>Monto a Pagar</h4>
+                </div>
+               
+                    <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 col-lg-offset-1">           
+                            <div class="row">
+                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                        <div class="radio">
+                                            <label>
+                                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                                                Monto Facturado 
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                        <span>$ 325.895</span>
+                                    </div>                                    
+                            </div>
+                            <div class="row">
+                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                        <div class="radio">
+                                            <label>
+                                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                                                Monto Facturado 
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                        <span>$ 325.895</span>
+                                    </div>                                    
+                            </div>
+                            <div class="row">
+                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                        <div class="radio">
+                                            <label>
+                                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                                                Monto Facturado 
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                        <input type="text" class="form-control" placeholder="Ingrese Monto">
+                                    </div>                                    
+                            </div>
+                        <div class="row">
+                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                        &nbsp;                                    
+                                    </div>                                    
+                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                      <p>Monto no debe exceder la Deuda Total</p>
+                                    </div>
+                        </div>
+
+                    </div>
+
+                
+            </div>
+            <div class="row">
+                    <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 col-lg-offset-1">           
+                            <div class="row">
+                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                      <p>Monto a pagar:<
+                                    </div>
+                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                        <span>$ 325.895</span>
+                                    </div>
+                            </div>
+                            <div class="row">
+                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                      <p>Cta Corriente</p>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                        <span>*** ** **8309</span>
+                                    </div>
+                            </div>
+                            <div class="row">
+                                    <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+                                      <input type="checkbox">Notificar por e-mail (sanchez@gmail.com)   
+                                    </div>
+                                    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                                        <span class="modificar"><img src="assets/img/pencil.png">Modificar</span>
+                                    </div>
+                            </div>
+                            <div class="row">
+                                    <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+                                      <input type="checkbox">Notificar por SMS (Tlfn:XX XX 54 78)   
+                                    </div>
+                                    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                                        <span class="modificar"><img src="assets/img/pencil.png">Modificar</span>
+                                    </div>
+                            </div>                             
+                    </div>
+
+
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <h4>Ingresa tu Dispositivo de Seguridad <img src="assets/img/interrogacion.png"></h4>
+                </div>
+                <div class="col-xs-11 col-sm-11 col-md-11 col-lg-11 col-lg-offset-1">           
+                        <div class="row">
+                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="optionsRadiosclave" id="optionsRadios2" value="option1" checked>Digipass
+                                    </label>
+                                </div>
+                            </div>
+                        </div> 
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"> 
+                    <input type="text" class="form-control digipass"><input type="text" class="form-control digipass"><input type="text" class="form-control digipass">
+                    <input type="text" class="form-control digipass"><input type="text" class="form-control digipass"><input type="text" class="form-control digipass">                
+                </div>              
+            </div>                           
+                <div class="col-xs-11 col-sm-11 col-md-11 col-lg-11 col-lg-offset-1">           
+                        <div class="row">
+                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="optionsRadiosclave" id="optionsRadios2" value="option1" checked>Digicard
+                                    </label>
+                                </div>
+                            </div>
+                        </div> 
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"> 
+                    <input type="text" class="form-control digipass"><input type="text" class="form-control digipass"><input type="text" class="form-control digipass">
+                    <input type="text" class="form-control digipass"><input type="text" class="form-control digipass"><input type="text" class="form-control digipass">                
+                </div>              
+                </div>
+            </div>                           
+        </div> <!-- OFFSET 2-->
+            
+    </div> <!-- DIV ROW CONTENEDOR -->
+
+</div> <!-- CIERRE DE CONTAINER FLUID -->
+
+ </body>
+</html>

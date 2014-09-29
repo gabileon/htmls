@@ -771,3 +771,172 @@ header {}
 
 /*PAGO TARGETAS*/
 
+#pago-de-tarjeta .col-lg-5{
+  border:none!important;
+  color: #333333;
+  font-size: 18px;
+}
+
+#pago-de-tarjeta h4{
+  color: #003772;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#pago-de-tarjeta .color-verde{
+  color:#66AC00;
+}
+
+
+#pago-de-tarjeta .detalle-seleccion-tarjeta{
+  font-size: 14px;
+  margin-top: -35px;
+  border-left: 1px solid #CCCCCC;
+  padding-left: 16px;
+  margin-left: -51px;
+}
+
+#pago-de-tarjeta .detalle-seleccion-tarjeta span{
+  margin-right: 15px;
+}
+
+#pago-de-tarjeta span{
+  float: right;
+
+}
+
+#pago-de-tarjeta .detalle-datos-pago{
+  margin-top: -30px!important;
+  margin-bottom:50px;
+}
+
+#pago-de-tarjeta .facturacion{
+  margin-top: 10px!important;
+  background-color:#F7F7F7;
+  border: 1px solid #F0F0F0;
+  padding: 3px;
+  font-size: 14px;
+}
+
+#pago-de-tarjeta #seleccion-cuenta p{
+  font-size: 18px;
+}
+
+#pago-de-tarjeta .detalle-seleccion-tarjeta #linea-credito-disponible #credito-disponible {
+  border-top: none;
+  margin-top: 0px;
+}
+
+#pago-de-tarjeta .seleccion-monto{
+  font-size: 14px;
+  border-left: 1px solid #CCCCCC; 
+  padding-left: 16px;
+  margin-left: 25px;
+}
+
+#pago-de-tarjeta #seleccion-cuenta-cargo .btn-default,
+#pago-de-tarjeta #seleccion-cuenta-cargo ul{
+  width: 470px;
+}
+
+
+#pago-de-tarjeta .selecion-monto-pagar{
+  font-size: 14px;
+  border-left: 1px solid #CCCCCC; 
+  padding-left: 16px;
+  margin-left: 25px;
+
+}
+
+#pago-de-tarjeta .selecion-monto-pagar .error-monto{
+  border: none;
+  
+}
+
+#pago-de-tarjeta .selecion-monto-pagar span{
+  margin-top:15px; 
+}
+
+#pago-de-tarjeta .selecion-monto-pagar p{
+  color: #E75B07;
+  border:none!important; 
+}
+
+#pago-de-tarjeta #detalle-monto-pagar .seleccion-notificacion{
+  font-size: 16px;
+}
+
+#pago-de-tarjeta #detalle-monto-pagar{
+  background-color: #FDFDFD;
+  border: 1px solid #F0F0F0;
+  margin-top: 30px;
+}
+
+#pago-de-tarjeta #detalle-monto-pagar .notificacion-medio{
+  font-size: 14px;
+}
+
+#pago-de-tarjeta .ingresar-dispositivo .form-control{
+  width: 40px;
+  height: 40px;
+  display: inline;
+  margin-right: 18px;
+}
+
+#pago-de-tarjeta .ingresar-dispositivo .digicard{
+  margin-right: 10px;
+}
+
+#pago-de-tarjeta .ingresar-dispositivo li{
+  margin-right: 18px;
+  display: inline;
+  list-style: none;
+}
+
+#pago-de-tarjeta .ingresar-dispositivo p{
+  margin-right: 106px;
+  display: inline;
+  list-style: none;
+}
+
+
+
+
+
+.caja-pasos {
+  border-left: 1px solid #002464;
+  padding: 0px 0px 64px 50px;
+  position: relative;
+}
+
+.caja-pasos:first-child{
+  margin-top:82px ;
+}
+.caja-pasos:last-child{
+  border-left: 0px;
+}
+
+.caja-pasos::before{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #002464;
+  border: 1px solid #002464;
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  text-align: center;
+  line-height: 30px;
+  color: white;
+  font-family: 'helveticaneuebold', arial, sans-serif;
+}
+.caja-pasos:nth-child(1)::before{
+  content: "1";
+}
+.caja-pasos:nth-child(2)::before{
+  content: "2";
+}
+
+.caja-pasos:nth-child(3)::before{
+  content: "3";
+}

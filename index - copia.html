@@ -4,7 +4,7 @@
     <title ng-bind="pageTitle"></title>
     <meta charset="utf-8">
 
-    <!-- social media tags  sdfsdfs-->
+    <!-- social media tags -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@joshdmiller">
     <meta name="twitter:title" content="ngBoilerplate">
@@ -144,11 +144,11 @@
 <div class="container" >
     <div class="row">
         <section class="breadcrumb bread-no-bg"> <!-- BREADCUMBS --> 
-            <a href="javascript:void(0);">Inicio</a> &gt; <a href="javascript:void(0);">Tarjetas de Cr&eacute;dito</a> &gt; <a  class="active" href="javascript:void(0);">Saldo</a>
+            <a href="javascript:void(0);">Inicio</a> &gt; <a href="javascript:void(0);">Tarjetas de Cr&eacute;dito</a> &gt; <a  class="active" href="javascript:void(0);">Saldo y Movimientos No Facturados</a>
         </section>
 
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 primer-titulo"> <!-- TITULO PAGINA -->
-            <h2>Tarjetas de Cr&eacute;dito <i class="glyphicon glyphicon-question-sign"></i></h2>  
+            <h2>Tarjetas de Cr&eacute;dito <img src="assets/img/interrogacion.png"></h2>  
         </div>
     
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"> <!-- SELECCION TARJETA -->
@@ -161,14 +161,14 @@
                     </button>
                     
                     <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-                        <li ng-click="OnItemClick('TIT Mastercard Nacional 4152822090000220')">
-                            <a role="menuitem" tabindex="-1" href="#">TIT Mastercard Nacional 4152822090000220</a>
+                        <li ng-click="OnItemClick('TIT Mastercard Nacional XXXX 2682')">
+                            <a role="menuitem" tabindex="-1" href="#" alt="4152830504002682">TIT Mastercard Nacional XXXX 2682</a>
                         </li>
-                          <li ng-click="OnItemClick('TIT Mastercard Nacional 4152822090000221')">
-                            <a role="menuitem" tabindex="-1" href="#">TIT Mastercard Nacional 4152822090000221</a>
+                          <li ng-click="OnItemClick('ADI VISA SIGNATURE VIP XXX 4321')">
+                            <a role="menuitem" tabindex="-1" href="#" alt="4152822090000220">ADI VISA SIGNATURE VIP XXX 4321</a>
                         </li >
-                        <li ng-click="OnItemClick('TIT Mastercard Nacional 4152822090000222')">
-                            <a role="menuitem" tabindex="-1" href="#">TIT Mastercard Nacional 4152822090000222</a>
+                        <li ng-click="OnItemClick('TIT Mastercard Nacional XXXX 0204')">
+                            <a role="menuitem" tabindex="-1" href="#" alt="4152822090000222">TIT Mastercard Nacional XXXX 0204</a>
                         </li>
                     </ul>     
                 </div> 
@@ -182,13 +182,13 @@
         <div ng-controller="TabsDemoCtrl"> <!-- TABS NAV -->
             <tabset justified="true" >
 
-                <tab heading="Saldos" >  <!-- TAB SALDOS NACIONAL - INTERNACIONAL -->
+                <tab heading="Saldos y Movimientos no Facturados" >  <!-- TAB SALDOS NACIONAL - INTERNACIONAL -->
                     <section class="col-lg-5 " ng-controller="GetData"> <!-- SALDOS IZQUIERDA -->
                         <div ng-controller="CollapseDemoCtrl" class="cupo-nacional"> <!-- CUPO NACIONAL  -->
                             <h3><span class="circulo-estado"></span>Cupo Nacional</h3>
                             <ul class="listado-de-saldos">
                                 <li>
-                                    Total<span class="text-success">{{pesos(tarjeta.cupoComprasNacional)}}</span>
+                                    <h4><b>Total<span>{{pesos(tarjeta.cupoComprasNacional)}}</span></b></h4>
                                 </li> 
                                 <li collapse="isCollapsed">
                                     Utilizado<span>{{pesos(tarjeta.deudaComprasNacional)}}
@@ -197,7 +197,7 @@
                                     Disponible  <span>{{pesos(tarjeta.disponibleComprasNacional)}}</span>
                                 </li>
                                 <li>
-                                    Total Avance <span>{{pesos(tarjeta.cupoAvancesNacional)}}</span>
+                                    <h4><b>Total Avance <span class="text-success">{{pesos(tarjeta.cupoAvancesNacional)}}</span></b></h4>
                                 </li>
 
                                 <li collapse="isCollapsed">
@@ -223,7 +223,7 @@
                             <ul class="listado-de-saldos">
                                                        
                                 <li>
-                                    Total<span class="text-success">{{dolar(tarjeta.cupoComprasInternacional)}}</span>
+                                    <h4><b>Total<span>{{dolar(tarjeta.cupoComprasInternacional)}}</span></b></h4>
                                 </li> 
                                 <li collapse="isCollapsed">
                                     Utilizado   <span>{{dolar(tarjeta.deudaComprasInternacional)}}</span> 
@@ -232,7 +232,7 @@
                                     Disponible  <span>{{dolar(tarjeta.disponibleComprasInternacional)}}</span>
                                 </li>
                                 <li>
-                                    Total Avance <span>{{dolar(tarjeta.cupoAvancesInternacional)}}</span>
+                                    <h4><b>Total Avance <span class="text-success">{{dolar(tarjeta.cupoAvancesInternacional)}}</span></b></h4>
                                 </li>
                                 <li collapse="isCollapsed">
                                     Utilizado Avance    <span>{{dolar(tarjeta.deudaComprasInternacional)}}</span>
@@ -260,18 +260,624 @@
                                 </carousel>
                             </div>
                         </div>
+
                     </section> <!-- END CAROUSEL DERECHA -->
+					
+					<br class="clearfix"/>
+
+					<!--movimientos no facturados-->
+
+					<h3 class="movimientos-titulo">Movimientos no Facturados</h3>
+
+					<div class="tabla-movimientos-no-facturados"> <!-- TABS NAV -->
+				        <tabset>
+				            <tab heading="Movimientos Nacionales">  
+				  				<table class="table table-striped movimientos-no-facturados">
+					     			<thead> 
+					        			<tr>
+											<th>Fecha</th>
+											<th>Hora</th>
+											<th>Tipo de Tarjeta</th>
+											<th>Tipo de Movimiento</th>
+											<th>Ciudad</th>
+											<th>$ Monto</th>
+					        			</tr>  
+					      			</thead>
+
+									<tbody>
+							        	<tr><td class="mes-movimiento"colspan="6"><small>MAYO 2014</small></td></tr>
+							        	<tr>
+											<td>12 de <br>
+											<small>mayo</small></td>
+											<td>23:58</td>
+											<td>TIT-999</td>
+											<td>Transferencia</td>
+											<td>Valparaiso</td>
+											<td>$24.066</td>
+							        	</tr>
+							        	<tr>
+											<td>12 de <br>
+											<small>mayo</small></td>
+											<td>23:58</td>
+											<td>TIT-999</td>
+											<td>Transferencia</td>
+											<td>Valparaiso</td>
+											<td>$24.066</td>
+							        	</tr>
+							        	<tr>
+											<td>12 de <br>
+											<small>mayo</small></td>
+											<td>23:58</td>
+											<td>TIT-999</td>
+											<td>Transferencia</td>
+											<td>Valparaiso</td>
+											<td>$24.066</td>
+							        	</tr>
+							        	<tr>
+											<td>12 de <br>
+											<small>mayo</small></td>
+											<td>23:58</td>
+											<td>TIT-999</td>
+											<td>Transferencia</td>
+											<td>Valparaiso</td>
+											<td>$24.066</td>
+							        	</tr>
+							       		 <tr>
+											<td>12 de <br>
+											<small>mayo</small></td>
+											<td>23:58</td>
+											<td>TIT-999</td>
+											<td>Transferencia</td>
+											<td>Valparaiso</td>
+											<td>$24.066</td>
+							        	</tr>
+							        	<tr>
+											<td>12 de <br>
+											<small>mayo</small></td>
+											<td>23:58</td>
+											<td>TIT-999</td>
+											<td>Transferencia</td>
+											<td>Valparaiso</td>
+											<td>$24.066</td>
+							       		</tr>
+							        	<tr>
+											<td>12 de <br>
+											<small>mayo</small></td>
+											<td>23:58</td>
+											<td>TIT-999</td>
+											<td>Transferencia</td>
+											<td>Valparaiso</td>
+											<td>$24.066</td>
+							        	</tr>
+							        	<tr>
+											<td>12 de <br>
+											<small>mayo</small></td>
+											<td>23:58</td>
+											<td>TIT-999</td>
+											<td>Transferencia</td>
+											<td>Valparaiso</td>
+											<td>$24.066</td>
+							        	</tr>
+							        	<tr>
+								         	<td>12 de <br>
+								          	<small>mayo</small></td>
+								          	<td>23:58</td>
+											<td>TIT-999</td>
+											<td>Transferencia</td>
+											<td>Valparaiso</td>
+											<td>$24.066</td>
+								        </tr>
+								        <tr>
+											<td>12 de <br>
+											<small>mayo</small></td>
+											<td>23:58</td>
+											<td>TIT-999</td>
+											<td>Transferencia</td>
+											<td>Valparaiso</td>
+											<td>$24.066</td>
+										</tr>
+										<tr>
+											<td>12 de <br>
+											<small>mayo</small></td>
+											<td>23:58</td>
+											<td>TIT-999</td>
+											<td>Transferencia</td>
+											<td>Valparaiso</td>
+											<td>$24.066</td>
+										</tr>
+										<tr>
+											<td>12 de <br>
+											<small>mayo</small></td>
+											<td>23:58</td>
+											<td>TIT-999</td>
+											<td>Transferencia</td>
+											<td>Valparaiso</td>
+											<td>$24.066</td>
+										</tr>
+										<tr>
+											<td>12 de <br>
+											<small>mayo</small></td>
+											<td>23:58</td>
+											<td>TIT-999</td>
+											<td>Transferencia</td>
+											<td>Valparaiso</td>
+											<td>$24.066</td>
+										</tr>
+										<tr>
+											<td>12 de <br>
+											<small>mayo</small></td>
+											<td>23:58</td>
+											<td>TIT-999</td>
+											<td>Transferencia</td>
+											<td>Valparaiso</td>
+											<td>$24.066</td>
+										</tr>
+										<tr>
+											<td>12 de <br>
+											<small>mayo</small></td>
+											<td>23:58</td>
+											<td>TIT-999</td>
+											<td>Transferencia</td>
+											<td>Valparaiso</td>
+											<td>$24.066</td>
+										</tr>
+										<tr><td class="mes-movimiento"colspan="6"><small>ABRIL 2014</small></td></tr>
+										<tr>
+											<td>12 de <br>
+											<small>abril</small></td>
+											<td>23:58</td>
+											<td>TIT-999</td>
+											<td>Transferencia</td>
+											<td>Valparaiso</td>
+											<td>$24.066</td>
+										</tr>
+										<tr>
+											<td>12 de <br>
+											<small>abril</small></td>
+											<td>23:58</td>
+											<td>TIT-999</td>
+											<td>Transferencia</td>
+											<td>Valparaiso</td>
+											<td>$24.066</td>
+										</tr>
+										<tr>
+											<td>12 de <br>
+											<small>abril</small></td>
+											<td>23:58</td>
+											<td>TIT-999</td>
+											<td>Transferencia</td>
+											<td>Valparaiso</td>
+											<td>$24.066</td>
+										</tr>
+										<tr>
+											<td>12 de <br>
+											<small>abril</small></td>
+											<td>23:58</td>
+											<td>TIT-999</td>
+											<td>Transferencia</td>
+											<td>Valparaiso</td>
+											<td>$24.066</td>
+										</tr>
+										<tr>
+											<td>12 de <br>
+											<small>abril</small></td>
+											<td>23:58</td>
+											<td>TIT-999</td>
+											<td>Transferencia</td>
+											<td>Valparaiso</td>
+											<td>$24.066</td>
+										</tr>
+										<tr>
+											<td>12 de <br>
+											<small>abril</small></td>
+											<td>23:58</td>
+											<td>TIT-999</td>
+											<td>Transferencia</td>
+											<td>Valparaiso</td>
+											<td>$24.066</td>
+										</tr>
+										<tr>
+											<td>12 de <br>
+											<small>abril</small></td>
+											<td>23:58</td>
+											<td>TIT-999</td>
+											<td>Transferencia</td>
+											<td>Valparaiso</td>
+											<td>$24.066</td>
+										</tr>
+										<tr>
+											<td>12 de <br>
+											<small>abril</small></td>
+											<td>23:58</td>
+											<td>TIT-999</td>
+											<td>Transferencia</td>
+											<td>Valparaiso</td>
+											<td>$24.066</td>
+										</tr>
+										<tr>
+											<td>12 de <br>
+											<small>abril</small></td>
+											<td>23:58</td>
+											<td>TIT-999</td>
+											<td>Transferencia</td>
+											<td>Valparaiso</td>
+											<td>$24.066</td>
+										</tr>
+										<tr>
+											<td>12 de <br>
+											<small>abril</small></td>
+											<td>23:58</td>
+											<td>TIT-999</td>
+											<td>Transferencia</td>
+											<td>Valparaiso</td>
+											<td>$24.066</td>
+										</tr>
+										<tr>
+											<td>12 de <br>
+											<small>abril</small></td>
+											<td>23:58</td>
+											<td>TIT-999</td>
+											<td>Transferencia</td>
+											<td>Valparaiso</td>
+											<td>$24.066</td>
+										</tr>
+										<tr>
+											<td>12 de <br>
+											<small>abril</small></td>
+											<td>23:58</td>
+											<td>TIT-999</td>
+											<td>Transferencia</td>
+											<td>Valparaiso</td>
+											<td>$24.066</td>
+								        </tr>
+								        <tr>
+											<td>12 de <br>
+											<small>abril</small></td>
+											<td>23:58</td>
+											<td>TIT-999</td>
+											<td>Transferencia</td>
+											<td>Valparaiso</td>
+											<td>$24.066</td>
+										</tr>
+								        <tr>
+											<td>12 de <br>
+											<small>abril</small></td>
+											<td>23:58</td>
+											<td>TIT-999</td>
+											<td>Transferencia</td>
+											<td>Valparaiso</td>
+											<td>$24.066</td>
+								        </tr>
+								        <tr>
+											<td>12 de <br>
+											<small>abril</small></td>
+											<td>23:58</td>
+											<td>TIT-999</td>
+											<td>Transferencia</td>
+											<td>Valparaiso</td>
+											<td>$24.066</td>
+								        </tr>
+									</tbody>
+						    	</table>                           
+				            </tab>
+
+				            <tab heading="Movimientos Internacionales" class="mov-internacionales">	  	
+				                <table class="table table-striped movimientos-no-facturados">
+							      	<thead> 
+							        	<tr>
+							          <th>Fecha</th>
+							          <th>Hora</th>
+							          <th>Tipo de Tarjeta</th>
+							          <th>Tipo de Movimiento</th>
+							          <th>País</th>
+							          <th>Ciudad</th>
+							          <th>US$ Monto</th>
+							        	</tr>  
+							      	</thead>
+
+								    <tbody>
+									        <tr><td class="mes-movimiento"colspan="7"><small>MAYO 2014</small></td></tr>
+									        <tr>
+									          <td>12 de <br>
+									           <small>mayo</small></td>
+									          <td>23:58</td>
+									          <td>TIT-999</td>
+									          <td>Transferencia</td>
+									          <td>País</td>
+									          <td>Valparaiso</td>
+									          <td>US$24.066,00</td>
+									        </tr>
+									        <tr><td class="mes-movimiento"colspan="7"><small>ABRIL 2014</small></td></tr>
+									        <tr>
+									          <td>12 de <br>
+									           <small>abril</small></td>
+									          <td>23:58</td>
+									          <td>TIT-999</td>
+									          <td>Transferencia</td>
+									          <td>País</td>		          
+									          <td>Valparaiso</td>
+									          <td>US$24.066,00</td>
+									        </tr>
+								    </tbody>
+							    </table>
+					    	</tab>
+				        </tabset>
+				    </div>
                 </tab> <!-- END TAB SALDOS NACIONAL - INTERNACIONAL -->
 
                 <!-- TABS SIN CONTENIDO -->
-                <tab heading="XXXX">Short Labeled Justified content</tab>
+
+
+                <tab heading="Pago de Tarjeta">
+  <div id="pago-de-tarjeta" class="container-fluid">
+
+    <div class="row">
+        <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 col-lg-offset-2">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        		<h4>Datos de Pago</h4>
+        	</div>
+        	<div class="row">
+                    <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 col-lg-offset-1">    		
+                        <div class="detalle-datos-pago">    
+                            <div class="row">
+                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                            		  <p>Deuda Total</p>
+                            		</div>
+                            		<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                            			<span>$ 3.004.350</span>
+                            		</div>
+                            </div>
+                            <div class="row">
+                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                      <p>Monto Facturado</p>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                        <span class="color-verde">$ 325.895</span>
+                                    </div>
+                            </div>
+                    </div>
+                    </div>
+            		<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                    <div class="Facturacion">
+                                        <div class="row">
+                                                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                                                    <p>Facturado al:</p>
+                                                </div>  
+                                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                                    <span>11 de septiembre</span>
+                                                </div>
+                                        </div>
+                                        <div class="row">
+                                                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                                                    <p>Pagar Hasta:</p>
+                                                </div>  
+                                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                                    <span>28 de septiembre</span>
+                                                </div>
+                                        </div>                            
+                                    </div> 
+                    </div>                     
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <p>Selecciona donde quieres realizar el pago de tu Tarjeta</p>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    <div class="dropdown seleccion-cueta-cargo">
+                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                            Seleccione Cuenta de cargo<span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Cuenta corriente *** ** **8309</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    &nbsp;
+                </div>        
+            </div> 
+
+            <div class="row">
+                    <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 col-lg-offset-1">           
+                    	<div class="detalle-seleccion-tarjeta">
+                            <div class="row">
+                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                      <p>Saldo en cueta:</p>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                        <span class="color-verde">$ 1.259.895</span>
+                                    </div>
+                            </div>
+                            <div class="row">
+                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                      <p>Línea de crédito disponible</p>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                        <span>$ 1.159.895</span>
+                                    </div>
+                            </div>
+                        </div>                            
+                    </div>                                 
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <h4>Monto a Pagar</h4>
+                </div>
+               
+                    <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 col-lg-offset-1">           
+                            <div class="row">
+                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                        <div class="radio">
+                                            <label>
+                                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                                                Monto Facturado 
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                        <span>$ 325.895</span>
+                                    </div>                                    
+                            </div>
+                            <div class="row">
+                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                        <div class="radio">
+                                            <label>
+                                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                                                Monto Facturado 
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                        <span>$ 325.895</span>
+                                    </div>                                    
+                            </div>
+                            <div class="row">
+                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                        <div class="radio">
+                                            <label>
+                                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                                                Monto Facturado 
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                        <input type="text" class="form-control" placeholder="Ingrese Monto">
+                                    </div>                                    
+                            </div>
+                        <div class="row">
+                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                        &nbsp;                                    
+                                    </div>                                    
+                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                      <p>Monto no debe exceder la Deuda Total</p>
+                                    </div>
+                        </div>
+
+                    </div>
+
+                
+            </div>
+            <div class="row">
+                    <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 col-lg-offset-1">           
+                            <div class="row">
+                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                      <p>Monto a pagar:<
+                                    </div>
+                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                        <span>$ 325.895</span>
+                                    </div>
+                            </div>
+                            <div class="row">
+                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                      <p>Cta Corriente</p>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                        <span>*** ** **8309</span>
+                                    </div>
+                            </div>
+                            <div class="row">
+                                    <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+                                      <input type="checkbox">Notificar por e-mail (sanchez@gmail.com)   
+                                    </div>
+                                    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                                        <span class="modificar"><img src="assets/img/pencil.png">Modificar</span>
+                                    </div>
+                            </div>
+                            <div class="row">
+                                    <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+                                      <input type="checkbox">Notificar por SMS (Tlfn:XX XX 54 78)   
+                                    </div>
+                                    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                                        <span class="modificar"><img src="assets/img/pencil.png">Modificar</span>
+                                    </div>
+                            </div>                             
+                    </div>
+
+
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <h4>Ingresa tu Dispositivo de Seguridad <img src="assets/img/interrogacion.png"></h4>
+                </div>
+                <div class="col-xs-11 col-sm-11 col-md-11 col-lg-11 col-lg-offset-1">           
+                        <div class="row">
+                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="optionsRadiosclave" id="optionsRadios2" value="option1" checked>Digipass
+                                    </label>
+                                </div>
+                            </div>
+                        </div> 
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"> 
+                    <input type="text" class="form-control digipass"><input type="text" class="form-control digipass"><input type="text" class="form-control digipass">
+                    <input type="text" class="form-control digipass"><input type="text" class="form-control digipass"><input type="text" class="form-control digipass">                
+                </div>              
+            </div>                           
+                <div class="col-xs-11 col-sm-11 col-md-11 col-lg-11 col-lg-offset-1">           
+                        <div class="row">
+                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="optionsRadiosclave" id="optionsRadios2" value="option1" checked>Digicard
+                                    </label>
+                                </div>
+                            </div>
+                        </div> 
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"> 
+                    <input type="text" class="form-control digipass"><input type="text" class="form-control digipass"><input type="text" class="form-control digipass">
+                    <input type="text" class="form-control digipass"><input type="text" class="form-control digipass"><input type="text" class="form-control digipass">                
+                </div>              
+                </div>
+            </div>                           
+        </div> <!-- OFFSET 2-->
+            
+    </div> <!-- DIV ROW CONTENEDOR -->
+
+</div> <!-- CIERRE DE CONTAINER FLUID -->
+                </tab>
+               
+
+
                 <tab heading="XXXX">Long Labeled Justified content</tab>
+
                 <tab heading="XXXX">Long Labeled Justified content</tab>
             </tabset>
             </div>
         </div>
     </div>
 </div> <!-- /container -->   
+
+
+<div class="container">
+	<div class="row">
+		<div class="col-lg-offset-9 col-lg-3">
+			<div class="btn-toolbar compaginacion" role="toolbar">
+
+	  			<span>Página</span>
+	  			<div class="btn-group numero-pagina"> 
+	  				<button type="button" class="btn numeracion"><a href="#">1</a></button>
+	  			</div>
+	  			<span>13/05/2014 al 30/40/2014</span>
+	  		</div>
+		</div>
+	</div>
+</div> <!--conaiter-->
+
+<div class="container">
+	<div class="row">
+		<div class="col-lg-offset-10 col-lg-2">
+			<div class="btn-toolbar compaginacion-flechas" role="toolbar">
+	  			<div class="btn-group flechas"> 
+	  				<button type="button" class="btn flecha-izq">
+	  				<a href="#"><img src="assets/img/izquierda.png"></a></button>
+					<button type="button" class="btn flecha-der"><img src="assets/img/derecha.png"></a></button>
+	  			</div>
+	  		</div>
+		</div>
+	</div>
+</div> <!--conaiter-->
 
   </body>
 </html>

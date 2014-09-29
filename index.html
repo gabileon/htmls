@@ -609,223 +609,256 @@
 
 
                 <tab heading="Pago de Tarjeta">
-  <div class="container-fluid">
+  <div id="pago-de-tarjeta" class="container-fluid">
 
     <div class="row">
         <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 col-lg-offset-2">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-        		<h4>Datos de Pago</h4>
-        	</div>
-        	<div class="row">
-                    <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 col-lg-offset-1">    		
-                            <div class="row">
-                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                            		  <p>Deuda Total</p>
-                            		</div>
-                            		<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                            			<span>$ 3.004.350</span>
-                            		</div>
-                            </div>
-                            <div class="row">
-                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                                      <p>Monto Facturado</p>
+            <div class="caja-pasos">
+		            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+		        		<h4>Datos de Pago</h4>
+		        	</div>
+		        	<div class="row">
+		                    <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 col-lg-offset-1">    		
+		                        <div class="detalle-datos-pago">    
+		                            <div class="row">
+		                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+		                            		  <p>Deuda Total</p>
+		                            		</div>
+		                            		<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+		                            			<span>$ 3.004.350</span>
+		                            		</div>
+		                            </div>
+		                            <div class="row">
+		                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+		                                      <p>Monto Facturado</p>
+		                                    </div>
+		                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+		                                        <span class="color-verde">$ 325.895</span>
+		                                    </div>
+		                            </div>
+		                    </div>
+		                    </div>
+		            		<div class="col-xs-6 col-sm-6 col-md-6 col-lg-4">
+		                                    <div class="facturacion">
+		                                        <div class="row">
+		                                                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-6">
+		                                                    <p>Facturado al:</p>
+		                                                </div>  
+		                                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+		                                                    <span>11 de septiembre</span>
+		                                                </div>
+		                                        </div>
+		                                        <div class="row">
+		                                                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-6">
+		                                                    <p>Pagar Hasta:</p>
+		                                                </div>  
+		                                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+		                                                    <span>28 de septiembre</span>
+		                                                </div>
+		                                        </div>                            
+		                                    </div> 
+		                    </div>                     
+		            </div>
+
+
+ 
+	            <div class="row">
+
+	                <div id ="seleccion-cuenta" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-lg-offset-1">
+	                    <p>Selecciona donde quieres realizar el pago de tu Tarjeta</p>
+	                </div>
+	                <div id="seleccion-cuenta-cargo"class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-lg-offset-1">
+	                    <div class="dropdown seleccion-cueta-cargo">
+	                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+	                            Seleccione Cuenta de cargo<span class="caret"></span>
+	                        </button>
+	                        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+	                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Cuenta corriente *** ** **8309 ($2.419.790)</a></li>
+	                        </ul>
+	                    </div>
+	                </div>
+	                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+	                    &nbsp;
+	                </div>        
+	            </div> 
+
+	            <div class="row">
+	                    <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 col-lg-offset-2">           
+	                    	<div class="detalle-seleccion-tarjeta">
+	                            <div class="row">
+                	                <div id="linea-credito-disponible">
+	                                    <div id="credito-disponible"class="col-xs-6 col-sm-6 col-md-6 col-lg-7">
+	                                      <p>Saldo en cueta:</p>
+	                                    </div>
                                     </div>
-                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                                        <span>$ 325.895</span>
-                                    </div>
-                            </div>
-                    </div>
-            		<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                                    <div class="Facturacion">
-                                        <div class="row">
-                                                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-                                                    <p>Facturado al:</p>
-                                                </div>  
-                                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                                                    <span>11 de septiembre</span>
-                                                </div>
-                                        </div>
-                                        <div class="row">
-                                                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-                                                    <p>Pagar Hasta:</p>
-                                                </div>  
-                                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                                                    <span>28 de septiembre</span>
-                                                </div>
-                                        </div>                            
-                                    </div> 
-                    </div>                     
+	                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4">
+	                                        <span class="color-verde">$ 1.259.895</span>
+	                                    </div>
+	                            </div>
+	                            <div class="row">
+                                    <div id="linea-credito-disponible">
+	                                    <div id="credito-disponible"class="col-xs-6 col-sm-6 col-md-6 col-lg-7">
+	                                      <p>Línea de crédito disponible</p>
+	                                    </div>
+	                                </div>    
+	                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4">
+	                                        <span>$ 1.159.895</span>
+	                                    </div>
+	                            </div>
+	                        </div>                            
+	                    </div>                                 
+	            </div>
             </div>
+            <div class="caja-pasos"> 
+	            <div class="row">
+	                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+	                    <h4>Monto a Pagar</h4>
+	                </div>
+	               
+	                    <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 col-lg-offset-1">           
+  							<div class="selecion-monto-pagar">
+	                            <div class="row">
+	                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+	                                        <div class="radio">
+	                                            <label>
+	                                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+	                                                Monto Facturado 
+	                                            </label>
+	                                        </div>
+	                                    </div>
+	                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+	                                        <span>$ 325.895</span>
+	                                    </div>                                    
+	                            </div>
+	                            <div class="row">
+	                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+	                                        <div class="radio">
+	                                            <label>
+	                                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+	                                                Monto Facturado 
+	                                            </label>
+	                                        </div>
+	                                    </div>
+	                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+	                                        <span>$ 325.895</span>
+	                                    </div>                                    
+	                            </div>
+	                            <div class="row">
+	                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+	                                        <div class="radio">
+	                                            <label>
+	                                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+	                                                Monto Facturado 
+	                                            </label>
+	                                        </div>
+	                                    </div>
+	                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+	                                        <input type="text" class="form-control" placeholder="Ingrese Monto">
+	                                    </div>                                    
+	                            </div>
+	                        <div class="row">
+	                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3 ">
+	                                        &nbsp;                                    
+	                                    </div>                                    
+	                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-9 ">
+	                                      <p>Monto no debe exceder la Deuda Total</p>
+	                                    </div>
+	                        </div>
 
-            <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <p>Selecciona donde quieres realizar el pago de tu Tarjeta</p>
-                </div>
-                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                    <div class="dropdown seleccion-cueta-cargo">
-                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
-                            Seleccione Cuenta de cargo<span class="caret"></span>
-                        </button>
-                        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Cuenta corriente *** ** **8309</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                    &nbsp;
-                </div>        
-            </div> 
+	                    </div>
+	                    </div>
 
-            <div class="row">
-                    <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 col-lg-offset-1">           
-                            <div class="row">
-                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                                      <p>Saldo en cueta:</p>
-                                    </div>
-                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                                        <span>$ 1.259.895</span>
-                                    </div>
+	                
+		            </div>
+		            <div class="row">
+	                    <div id="detalle-monto-pagar" class="col-xs-5 col-sm-5 col-md-5 col-lg-6 col-lg-offset-1">           
+                            <div class="seleccion-notificacion">
+	                            <div class="row">
+	                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+	                                      <p>Monto a pagar:</p>
+	                                    </div>
+	                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+	                                        <span>$ 325.895</span>
+	                                    </div>
+	                            </div>
+	                            <div class="row">
+	                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+	                                      <p>Cta Corriente</p>
+	                                    </div>
+	                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+	                                        <span>*** ** **8309</span>
+	                                    </div>
+	                            </div>
                             </div>
-                            <div class="row">
-                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                                      <p>Línea de crédito disponible</p>
-                                    </div>
-                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                                        <span>$ 1.159.895</span>
-                                    </div>
-                            </div>                            
-                    </div>                                 
-            </div>
-            <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <h4>Monto a Pagar</h4>
-                </div>
-               
-                    <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 col-lg-offset-1">           
-                            <div class="row">
-                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                                        <div class="radio">
-                                            <label>
-                                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-                                                Monto Facturado 
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                                        <span>$ 325.895</span>
-                                    </div>                                    
-                            </div>
-                            <div class="row">
-                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                                        <div class="radio">
-                                            <label>
-                                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-                                                Monto Facturado 
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                                        <span>$ 325.895</span>
-                                    </div>                                    
-                            </div>
-                            <div class="row">
-                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                                        <div class="radio">
-                                            <label>
-                                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-                                                Monto Facturado 
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                                        <input type="text" class="form-control" placeholder="Ingrese Monto">
-                                    </div>                                    
-                            </div>
-                        <div class="row">
-                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                                        &nbsp;                                    
-                                    </div>                                    
-                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                                      <p>Monto no debe exceder la Deuda Total</p>
-                                    </div>
-                        </div>
 
-                    </div>
-
-                
-            </div>
-            <div class="row">
-                    <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 col-lg-offset-1">           
-                            <div class="row">
-                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                                      <p>Monto a pagar:<
-                                    </div>
-                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                                        <span>$ 325.895</span>
-                                    </div>
-                            </div>
-                            <div class="row">
-                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                                      <p>Cta Corriente</p>
-                                    </div>
-                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                                        <span>*** ** **8309</span>
-                                    </div>
-                            </div>
-                            <div class="row">
-                                    <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
-                                      <input type="checkbox">Notificar por e-mail (sanchez@gmail.com)   
-                                    </div>
-                                    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-                                        <span class="modificar"><img src="assets/img/pencil.png">Modificar</span>
-                                    </div>
-                            </div>
-                            <div class="row">
-                                    <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
-                                      <input type="checkbox">Notificar por SMS (Tlfn:XX XX 54 78)   
-                                    </div>
-                                    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-                                        <span class="modificar"><img src="assets/img/pencil.png">Modificar</span>
-                                    </div>
-                            </div>                             
-                    </div>
+	                            <div class="row">
+                                    <div class="notificacion-medio">    
+                                		<div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+	                                      <input type="checkbox">Notificar por e-mail (sanchez@gmail.com)   
+	                                    </div>
+	                                    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+	                                        <span class="modificar"><img src="assets/img/pencil.png">Modificar</span>
+	                                    </div>
+	                            </div>
+	                            </div>
+	                            <div class="row">
+                                    <div class="notificacion-medio">   
+	                                    <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+	                                      <input type="checkbox">Notificar por SMS (Tlfn:XX XX 54 78)   
+	                                    </div>
+	                                    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+	                                        <span class="modificar"><img src="assets/img/pencil.png">Modificar</span>
+	                                    </div>
+	                            	</div>
+	                            </div>
+                             
+	                    </div>
+                </div>   
 
 
             </div>
-            <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <h4>Ingresa tu Dispositivo de Seguridad <img src="assets/img/interrogacion.png"></h4>
-                </div>
-                <div class="col-xs-11 col-sm-11 col-md-11 col-lg-11 col-lg-offset-1">           
-                        <div class="row">
-                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                                <div class="radio">
-                                    <label>
-                                        <input type="radio" name="optionsRadiosclave" id="optionsRadios2" value="option1" checked>Digipass
-                                    </label>
-                                </div>
-                            </div>
-                        </div> 
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"> 
-                    <input type="text" class="form-control digipass"><input type="text" class="form-control digipass"><input type="text" class="form-control digipass">
-                    <input type="text" class="form-control digipass"><input type="text" class="form-control digipass"><input type="text" class="form-control digipass">                
-                </div>              
-            </div>                           
-                <div class="col-xs-11 col-sm-11 col-md-11 col-lg-11 col-lg-offset-1">           
-                        <div class="row">
-                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                                <div class="radio">
-                                    <label>
-                                        <input type="radio" name="optionsRadiosclave" id="optionsRadios2" value="option1" checked>Digicard
-                                    </label>
-                                </div>
-                            </div>
-                        </div> 
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"> 
-                    <input type="text" class="form-control digipass"><input type="text" class="form-control digipass"><input type="text" class="form-control digipass">
-                    <input type="text" class="form-control digipass"><input type="text" class="form-control digipass"><input type="text" class="form-control digipass">                
-                </div>              
-                </div>
+            <div class="caja-pasos"> 
+	            <div class="row">
+	                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+	                    <h4>Ingresa tu Dispositivo de Seguridad <img src="assets/img/interrogacion.png"></h4>
+	                </div>
+	                <div class="col-xs-11 col-sm-11 col-md-11 col-lg-11 col-lg-offset-1">           
+	                        <div class="row">
+	                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+	                                <div class="radio">
+	                                    <label>
+	                                        <input type="radio" name="optionsRadiosclave" id="optionsRadios2" value="option1" checked>Digipass
+	                                    </label>
+	                                </div>
+	                            </div>
+	                        </div> 
+	                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ingresar-dispositivo"> 
+	                    <input type="text" class="form-control digipass"><input type="text" class="form-control digipass"><input type="text" class="form-control digipass">
+	                    <input type="text" class="form-control digipass"><input type="text" class="form-control digipass"><input type="text" class="form-control digipass">                
+	                </div>              
+	            </div>                           
+	                <div class="col-xs-11 col-sm-11 col-md-11 col-lg-11 col-lg-offset-1">           
+	                        <div class="row">
+	                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+	                                <div class="radio">
+	                                    <label>
+	                                        <input type="radio" name="optionsRadiosclave" id="optionsRadios2" value="option1" checked>Digicard
+	                                    </label>
+	                                </div>
+	                            </div>
+	                        </div> 
+	                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ingresar-dispositivo"> 
+	                    <p>A3</p><p>B4</p><p>D4</p>
+                  </div>
+                  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ingresar-dispositivo">
+	                    <li><input type="text" class="form-control digicard"><input type="text" class="form-control digicard"></li>
+	                    
+	                    <li><input type="text" class="form-control digicard"><input type="text" class="form-control digicard"></li>
+	                    
+	                    <li><input type="text" class="form-control digicard"><input type="text" class="form-control digicard"></li>                
+	                </div>              
+	                </div>
+	            </div>
             </div>                           
         </div> <!-- OFFSET 2-->
             
