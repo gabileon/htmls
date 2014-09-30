@@ -670,7 +670,7 @@
 	                <div id="seleccion-cuenta-cargo"class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-lg-offset-1">
 	                    <div class="dropdown seleccion-cueta-cargo">
 	                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
-	                            Seleccione Cuenta de cargo<span class="caret"></span>
+	                           Cuenta corriente *** ** **8309 ($2.419.790) <span class="caret"></span>
 	                        </button>
 	                        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
 	                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Cuenta corriente *** ** **8309 ($2.419.790)</a></li>
@@ -756,17 +756,13 @@
 	                                        <input type="text" class="form-control" placeholder="Ingrese Monto">
 	                                    </div>                                    
 	                            </div>
-	                        <div class="row">
-	                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3 ">
-	                                        &nbsp;                                    
-	                                    </div>                                    
-	                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-9 ">
-	                                      <p>Monto no debe exceder la Deuda Total</p>
+                              </div>
+                          </div>
+	                        <div class="row">                                 
+	                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
+	                                      <p class="mensaje-error">Monto no debe exceder la Deuda Total</p>
 	                                    </div>
 	                        </div>
-
-	                    </div>
-	                    </div>
 
 	                
 		            </div>
@@ -856,10 +852,21 @@
 	                    <li><input type="text" class="form-control digicard"><input type="text" class="form-control digicard"></li>
 	                    
 	                    <li><input type="text" class="form-control digicard"><input type="text" class="form-control digicard"></li>                
-	                </div>              
+	                </div> 
+                  <div class="row">                                 
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
+                      <p class="clave-error">Clave incorrecta. Ingrese nuevamente</p>
+                    </div>
+                  </div>             
 	                </div>
 	            </div>
-            </div>                           
+            </div>
+            <div id="realizar-pago"class="row">                                 
+              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 "> 
+                <a class="realizar-pago"href="#">Realizar Pago <span class="glyphicon glyphicon-chevron-right"></span></a>
+                <a class="limpiar" href="#">Cancelar</a>
+              </div>
+            </div>                          
         </div> <!-- OFFSET 2-->
             
     </div> <!-- DIV ROW CONTENEDOR -->
@@ -876,37 +883,10 @@
             </div>
         </div>
     </div>
-</div> <!-- /container -->   
+  </div> <!-- /container -->   
 
 
-<div class="container">
-	<div class="row">
-		<div class="col-lg-offset-9 col-lg-3">
-			<div class="btn-toolbar compaginacion" role="toolbar">
-
-	  			<span>Página</span>
-	  			<div class="btn-group numero-pagina"> 
-	  				<button type="button" class="btn numeracion"><a href="#">1</a></button>
-	  			</div>
-	  			<span>13/05/2014 al 30/40/2014</span>
-	  		</div>
-		</div>
-	</div>
-</div> <!--conaiter-->
-
-<div class="container">
-	<div class="row">
-		<div class="col-lg-offset-10 col-lg-2">
-			<div class="btn-toolbar compaginacion-flechas" role="toolbar">
-	  			<div class="btn-group flechas"> 
-	  				<button type="button" class="btn flecha-izq">
-	  				<a href="#"><img src="assets/img/izquierda.png"></a></button>
-					<button type="button" class="btn flecha-der"><img src="assets/img/derecha.png"></a></button>
-	  			</div>
-	  		</div>
-		</div>
-	</div>
-</div> <!--conaiter-->
+    </div> <!--conaiter-->
 
   </body>
 </html>
