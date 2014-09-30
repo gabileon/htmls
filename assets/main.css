@@ -918,6 +918,7 @@ header {}
   padding: 14px 30px 18px 30px;
   float: right;
   color: #fff;
+  text-decoration: none;
 }
 
 #pago-de-tarjeta #realizar-pago .limpiar{
