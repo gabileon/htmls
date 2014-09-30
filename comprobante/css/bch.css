@@ -1,0 +1,30 @@
+@charset "UTF-8";
+/* CSS Document */
+
+#pago-tc h3 {
+	color: #083062;
+	vertical-align: middle;
+}
+
+#pago-tc h3 img { line-height: 1.1em}
+
+#pago-tc .confir-msj {
+	color: #609B00;
+}
+
+#pago-tc .comprobante-pago-tc {background-color: #F8F8F8;
+border: 1px solid #E2E2E2; }
+
+#pago-tc .cuenta,#pago-tc .tarjeta {background-color: #ffffff;
+color: #333333;
+margin: 2em; }
+
+#pago-tc .datos {
+margin: 2em;
+border-left: 1px solid #E2E2E2; }
+
+#pago-tc .datos .fecha,#pago-tc .datos .hora,#pago-tc .datos .monto {border-bottom:1px solid #E2E2E2;font-weight: bold;color: #333333; }
+#pago-tc .cuenta span,#pago-tc .tarjeta span {font-weight: bold}
+#pago-tc .datos span {font-weight: normal;}
+#pago-tc .imagen-bottom { vertical-align: bottom; margin: 65% 0 0}
+#pago-tc .imagen-centro { vertical-align: middle; margin: 120% 0 0}
