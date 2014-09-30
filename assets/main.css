@@ -992,6 +992,12 @@ header {}
 
 }
 
+#mis-puntos h4{
+  font-weight: bold;
+  color: #003772;
+  font-size: 18px;
+}
+
 #mis-puntos span{
   float: right;
   padding: 0px;
@@ -1008,4 +1014,30 @@ header {}
 
 #mis-puntos .progress .barra-punto-ocupados{
   margin-right: -200px;
+}
+
+#mis-puntos #pto-acumulados{
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: 16px;
+}
+
+#mis-puntos .detalle-puntos{
+  border: 1px solid #CAD5E1;
+  margin-top: 36px;
+  padding: 10px;
+
+}
+
+#mis-puntos .detalle-puntos .pto-verde{
+  color:#66AC00;
+  font-size: 18px;
+  }
+
+#mis-puntos .detalle-puntos p{
+  font-size: 16px;
+}
+
+#mis-puntos .detalle-puntos span{
+  font-size: 18px;
 }
