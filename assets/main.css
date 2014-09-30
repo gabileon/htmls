@@ -860,7 +860,7 @@ header {}
 #pago-de-tarjeta .mensaje-error{
   color: #E75B07;
   border:none!important;
-  margin-left: 299px;
+  margin-left: 335px;
   font-size: 14px; 
 }
 
@@ -927,10 +927,13 @@ header {}
   margin-right: 15px;
 }
 
-
-
-
-
+#pago-de-tarjeta .selecion-monto-pagar .otro-monto{
+  width: 106px;
+  height: 25px;
+  float: right;
+  margin-top: 6px;
+  margin-right: -7px;
+}
 
 
 
@@ -974,4 +977,35 @@ header {}
 
 .caja-pasos:nth-child(3)::before{
   content: "3";
+}
+
+
+
+/*Mis puntos*/
+#mis-puntos .progress{
+  height: 10px;
+  width: 150px;
+  float: right;
+  padding: 0px;
+  margin-right: -16px;
+;
+
+}
+
+#mis-puntos span{
+  float: right;
+  padding: 0px;
+}
+
+#mis-puntos .detalle-puntos{
+  border: none;
+}
+
+#mis-puntos .puntos-canjeados,
+#mis-puntos .pto-canjeados{
+  margin-top: 26px;
+}
+
+#mis-puntos .progress .barra-punto-ocupados{
+  margin-right: -200px;
 }
