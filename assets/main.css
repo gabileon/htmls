@@ -1079,5 +1079,20 @@ padding: 5px;
   padding-top: 11px;
   padding-bottom: 11px;
   text-decoration: none;
-  margin-top: 90px;
+
 }
+
+#mis-puntos #info-canje-pto{
+  margin-top: 20px;
+  margin-left: 25px;
+}
+
+#mis-puntos #info-canje-pto p{
+  font-size: 19px;
+
+}
+
+#mis-puntos #canje-puntos #canjear{
+  margin-top: 36px;
+}
+
