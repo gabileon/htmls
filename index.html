@@ -621,7 +621,7 @@
 		                    <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 col-lg-offset-1">    		
 		                        <div class="detalle-datos-pago">    
 		                            <div class="row">
-		                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+		                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
 		                            		  <p>Deuda Total</p>
 		                            		</div>
 		                            		<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
@@ -638,22 +638,22 @@
 		                            </div>
 		                    </div>
 		                    </div>
-		            		<div class="col-xs-6 col-sm-6 col-md-6 col-lg-4">
-		                                    <div class="facturacion">
+		            		<div class="col-xs-6 col-sm-6 col-md-6 col-lg-5">
+		                                    <div class="facturacion vineta">
 		                                        <div class="row">
-		                                                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-6">
+		                                                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-4">
 		                                                    <p>Facturado al:</p>
 		                                                </div>  
 		                                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-		                                                    <span>11 de septiembre</span>
+		                                                    <span class="facturado">11 de septiembre 2014</span>
 		                                                </div>
 		                                        </div>
 		                                        <div class="row">
-		                                                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-6">
+		                                                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-4">
 		                                                    <p>Pagar Hasta:</p>
 		                                                </div>  
 		                                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-		                                                    <span>28 de septiembre</span>
+		                                                    <span class="facturado">28 de septiembre 2014</span>
 		                                                </div>
 		                                        </div>                            
 		                                    </div> 
@@ -762,6 +762,12 @@
 	                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
 	                                      <p class="mensaje-error">Monto no debe exceder la Deuda Total</p>
 	                                    </div>
+                                      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
+                                        <p class="mensaje-error">Monto de Pago no debe ser menor o igual a CERO</p>
+                                      </div>
+                                      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
+                                        <p class="mensaje-error">Monto de Pago no debe exceder su cupo disponible de la cuenta seleccionada</p>
+                                      </div>                                      
 	                        </div>
 
 	                
@@ -788,14 +794,12 @@
                             </div>
 
 	                            <div class="row">
-                                    <div class="notificacion-medio">    
-                                		<div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+                                  		<div class="col-xs-9 col-sm-9 col-md-9 col-lg-9")
 	                                      <input type="checkbox">Notificar por e-mail (sanchez@gmail.com)   
 	                                    </div>
 	                                    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
 	                                        <span class="modificar"><img src="assets/img/pencil.png">Modificar</span>
 	                                    </div>
-	                            </div>
 	                            </div>
                           
 	                    </div>

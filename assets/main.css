@@ -816,7 +816,14 @@ header {}
   border: 1px solid #F0F0F0;
   padding: 3px;
   font-size: 14px;
+  margin-top: -34px !important;
 }
+
+#pago-de-tarjeta .vineta{
+  background-image: url(assets/img/00.png);
+  background-position: -20px;
+}
+
 
 #pago-de-tarjeta #seleccion-cuenta p{
   font-size: 18px;
@@ -892,12 +899,16 @@ header {}
   font-size: 14px;
 }
 
+
+
+
 #pago-de-tarjeta .ingresar-dispositivo .form-control{
   width: 40px;
   height: 40px;
   display: inline;
   margin-right: 18px;
 }
+
 
 #pago-de-tarjeta .ingresar-dispositivo .digicard{
   margin-right: 10px;
@@ -986,6 +997,23 @@ header {}
 .caja-pasos:nth-child(3)::before{
   content: "3";
 }
+
+.veloBlanco{
+    
+}
+.veloBlanco::after{
+  width: 110%;
+  height: 108%;
+  background-color: rgba(255,255,255,0.8);
+  content: "";
+  top: -15px;
+  left: -15px;
+  position: absolute;
+  border-radius: 0%;
+  display: block;
+}
+
+
 
 
 
