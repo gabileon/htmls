@@ -810,18 +810,46 @@ header {}
   margin-bottom:50px;
 }
 
-#pago-de-tarjeta .facturacion{
-  margin-top: 10px!important;
+
+
+#pago-de-tarjeta .facturacion {
+  position: relative;
+  margin-top: -41px!important;
   background-color:#F7F7F7;
   border: 1px solid #F0F0F0;
-  padding: 3px;
+  padding: 10px;
   font-size: 14px;
-  margin-top: -34px !important;
+}
+#pago-de-tarjeta .facturacion:after, #pago-de-tarjeta .facturacion:before {
+  right: 100%;
+  top: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+#pago-de-tarjeta .facturacion:after {
+  border-color: rgba(247, 247, 247, 0);
+  border-right-color: #F7F7F7;
+  border-width: 11px;
+  margin-top: -11px;
+}
+#pago-de-tarjeta .facturacion:before {
+  border-color: rgba(240, 240, 240, 0);
+  border-right-color: #F0F0F0;
+  border-width: 12px;
+  margin-top: -12px;
+}
+
+#pago-de-tarjeta .facturacion .facturado{
+  font-size: 14px;
 }
 
 #pago-de-tarjeta .vineta{
-  background-image: url(assets/img/00.png);
-  background-position: -20px;
+  margin-top: 20px;
 }
 
 
