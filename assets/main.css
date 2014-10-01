@@ -1026,14 +1026,20 @@ header {}
 #mis-puntos .detalle-puntos{
   border: 1px solid #CAD5E1;
   margin-top: 36px;
-  padding: 10px;
+  padding: 20px 10px 20px 10px;
 
 }
 
 #mis-puntos .detalle-puntos .pto-verde{
   color:#66AC00;
-  font-size: 18px;
+  font-size: 20px;
+  font-weight: bold;
   }
+
+#mis-puntos .detalle-puntos .pto-disponibles{
+  font-weight: bold;
+  font-size: 20px;
+}
 
 #mis-puntos .detalle-puntos p{
   font-size: 16px;
@@ -1041,4 +1047,14 @@ header {}
 
 #mis-puntos .detalle-puntos span{
   font-size: 18px;
+}
+
+#mis-puntos .canjear-pts{
+background-color: #DBDBEA;
+margin-top: 36px;
+border-color: #CAD5E1;
+}
+
+#mis-puntos .canjear-pts img{
+  margin: 7px 0px 7px 0px;
 }
