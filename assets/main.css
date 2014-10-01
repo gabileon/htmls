@@ -837,6 +837,13 @@ header {}
 #pago-de-tarjeta #seleccion-cuenta-cargo .btn-default,
 #pago-de-tarjeta #seleccion-cuenta-cargo ul{
   width: 470px;
+  height: 43px;
+  line-height: 25px;
+}
+
+#pago-de-tarjeta #seleccion-cuenta-cargo .caret{
+  line-height: 25px; 
+  vertical-align: middle;
 }
 
 
@@ -1053,8 +1060,24 @@ header {}
 background-color: #DBDBEA;
 margin-top: 36px;
 border-color: #CAD5E1;
+padding: 5px;
 }
 
 #mis-puntos .canjear-pts img{
-  margin: 7px 0px 7px 0px;
+  margin: 8px 5px 8px 17px;
+}
+
+#mis-puntos #canje-puntos .canjear{
+  width: 126px;
+  height: 35px;
+  background-color: #003671;
+  border-radius: 20px;
+  font-size: 16px;
+  padding-left:23px;
+  padding-right:23px;   
+  color: #fff;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  text-decoration: none;
+  margin-top: 90px;
 }
